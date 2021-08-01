@@ -1,5 +1,5 @@
 # my-calc
-Versão de exemplo de uma calculadora. 
+Versão simples de uma calculadora em JavaScript. 
 
 Projeto feito com [Bruno Cabral](https://github.com/BrunoCabral1) e [Jardson Silva](https://github.com/JARDSONSAN).<br>
 Nossa aplicação é a [my-calc-2021](https://my-calc-2021.herokuapp.com).
