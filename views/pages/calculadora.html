@@ -75,7 +75,7 @@
             top: 3px;
         }
 
-        #resultado {
+        #display {
             background-color: white;
             width: 214px;
             height: 30px;
@@ -85,6 +85,20 @@
             text-align: right;
             padding: 5px;
             border-radius: 5px;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+
+        ::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: rgb(60, 59, 59);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #161616;
         }
     </style>
 </head>
@@ -93,7 +107,7 @@
     <div class="fundo">
         <div class="calculadora">
             <h2 align="center">Calculadora</h2>
-            <p id="resultado"></p>
+            <p id="display"></p>
             <table align="center">
                 <tr>
                     <td><button class="btn" onclick="clean()">C</button></td>
@@ -129,23 +143,23 @@
     </div>
     <script>
         function insert(num) {
-            var numero = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = numero + num;
+            var numero = document.getElementById('display').innerHTML;
+            document.getElementById('display').innerHTML = numero + num;
         }
         function clean() {
-            document.getElementById('resultado').innerHTML = "";
+            document.getElementById('display').innerHTML = "";
         }
         function back() {
-            var resultado = document.getElementById('resultado').innerHTML;
-            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
+            var display = document.getElementById('display').innerHTML;
+            document.getElementById('display').innerHTML = display.substring(0, display.length - 1);
         }
         function calcular() {
-            var resultado = document.getElementById('resultado').innerHTML;
-            if (resultado) {
-                document.getElementById('resultado').innerHTML = eval(resultado);
+            var display = document.getElementById('display').innerHTML;
+            if (display) {
+                document.getElementById('display').innerHTML = eval(display);
             }
             else {
-                document.getElementById('resultado').innerHTML = "Nada..."
+                document.getElementById('display').innerHTML = "Nada..."
             }
         }
     </script>
