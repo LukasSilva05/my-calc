@@ -30,34 +30,61 @@
             padding: 10px;
         }
 
-        .resultado {
-            height: 30px;
-            width: 163px;
-            background: rgb(252, 252, 252);
-            font-size: 18px;
-            margin: 3px;
-            color: black;
-            border-radius: 5px;
-        }
-
         .btn {
-            width: 40px;
-            height: 40px;
-            background: rgb(77, 77, 77);
-            font-size: 18px;
-            margin: 1px;
-            color: white;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            margin: 3px;
+            background-color: rgb(60, 59, 59);
+            border: none;
             border-radius: 5px;
+            color: #fff;
         }
 
         .btn:hover {
-            background: #3f3f3f;
+            background: #161616;
             font-size: 20px;
         }
 
         .btn:active {
             position: relative;
-            top: 2px;
+            top: 3px;
+        }
+
+        .btnIgual {
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            margin: 3px;
+            height: 106px;
+            background-color: rgb(0, 0, 209);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .btnIgual:hover {
+            background: rgb(0, 0, 77);
+            font-size: 20px;
+        }
+
+        .btnIgual:active {
+            position: relative;
+            top: 3px;
+        }
+
+        #resultado {
+            background-color: white;
+            width: 214px;
+            height: 30px;
+            margin: 5px;
+            font-size: 25px;
+            color: black;
+            text-align: right;
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -66,85 +93,60 @@
     <div class="fundo">
         <div class="calculadora">
             <h2 align="center">Calculadora</h2>
+            <p id="resultado"></p>
             <table align="center">
                 <tr>
-                    <td colspan="6"><input type="text" class="resultado btnColor" id="display" value="0" disabled></td>
+                    <td><button class="btn" onclick="clean()">C</button></td>
+                    <td><button class="btn" onclick="back()">⌫</button></td>
+                    <td><button class="btn" onclick="insert('/')">/</button></td>
+                    <td><button class="btn" onclick="insert('*')">*</button></td>
                 </tr>
                 <tr>
-                    <td><input type="button" class="btn" value="7" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="8" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="9" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="*" onclick="atualizarOperacao(this)" />
-                    </td>
+                    <td><button class="btn" onclick="insert('7')">7</button></td>
+                    <td><button class="btn" onclick="insert('8')">8</button></td>
+                    <td><button class="btn" onclick="insert('9')">9</button></td>
+                    <td><button class="btn" onclick="insert('-')">-</button></td>
                 </tr>
                 <tr>
-                    <td><input type="button" class="btn" value="4" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="5" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="6" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="/" onclick="atualizarOperacao(this)" />
-                    </td>
+                    <td><button class="btn" onclick="insert('4')">4</button></td>
+                    <td><button class="btn" onclick="insert('5')">5</button></td>
+                    <td><button class="btn" onclick="insert('6')">6</button></td>
+                    <td><button class="btn" onclick="insert('+')">+</button></td>
                 </tr>
                 <tr>
-                    <td><input type="button" class="btn" value="1" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="2" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="3" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="-" onclick="atualizarOperacao(this)" />
-                    </td>
+                    <td><button class="btn" onclick="insert('1')">1</button></td>
+                    <td><button class="btn" onclick="insert('2')">2</button></td>
+                    <td><button class="btn" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="btnIgual" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
-                    <td><input type="button" class="btn" value="C" onclick="limparDisplay()" /></td>
-                    <td><input type="button" class="btn" value="0" onclick="atualizarDisplay(this)" />
-                    </td>
-                    <td><input type="button" class="btn" value="=" style="background-color: blue;"
-                            onclick="calcularOperacao()" />
-                    </td>
-                    <td><input type="button" class="btn" value="+" onclick="atualizarOperacao(this)" />
-                    </td>
+                    <td colspan="2"><button class="btn" style="width: 106px;" onclick="insert('0')">0</button></td>
+                    <td><button class="btn" onclick="insert('.')">.</button></td>
+                </tr>
                 </tr>
             </table>
         </div>
     </div>
     <script>
-        function atualizarDisplay(btn) {
-            const display = document.getElementById('display');
-            if (display.value.length === 9) return;
-            if (display.value === '0') display.value = btn.value;
-            else display.value += btn.value;
+        function insert(num) {
+            var numero = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = numero + num;
         }
-
-        function limparDisplay() {
-            document.getElementById('display').value = '0';
+        function clean() {
+            document.getElementById('resultado').innerHTML = "";
         }
-
-        var operador = ''
-        var valor1 = 0
-        function atualizarOperacao(btn) {
-            const display = document.getElementById('display');
-            operador = btn.value;
-            valor1 = parseInt(display.value);
-            display.value = '0';
+        function back() {
+            var resultado = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
         }
-
-        function calcularOperacao() {
-            const display = document.getElementById('display');
-            const valor2 = parseInt(display.value);
-            valor1 = eval(valor1 + operador + valor2);
-            display.value = valor1;
-            operador = '';
-        }
-
-        function manipularTeclado() {
-            if (/[0-9]/.test(event.key))
-                atualizarDisplay({ value: event.key });
+        function calcular() {
+            var resultado = document.getElementById('resultado').innerHTML;
+            if (resultado) {
+                document.getElementById('resultado').innerHTML = eval(resultado);
+            }
+            else {
+                document.getElementById('resultado').innerHTML = "Nada..."
+            }
         }
     </script>
 
