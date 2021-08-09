@@ -165,7 +165,7 @@
                     <td><button class="btn" onclick="insert(')')">)</button></td>
                 </tr>
                 <tr>
-                    <td><button class="btn" onclick="insert('√')">√</button></td>
+                    <td><button class="btn" onclick="calcularRaiz()">√</button></td>
                     <td><button class="btn" onclick="insert('%')">%</button></td>
                     <td><button class="btn" onclick="insert('/')">/</button></td>
                     <td><button class="btn" onclick="insert('*')">*</button></td>
@@ -216,6 +216,11 @@
             else {
                 document.getElementById('display').innerHTML = "0"
             }
+        }
+        function calcularRaiz() {
+            var display = document.getElementById('display').innerHTML
+            var raiz = Math.sqrt(display)
+            document.getElementById('display').innerHTML = raiz
         }
     </script>
 
