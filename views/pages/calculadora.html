@@ -6,151 +6,152 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/img/522507.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    <beta rel="icon" href="//image.flaticon.com/icons/png/512/522/522507.png">
 
-        .fundo {
-            background-image: linear-gradient(45deg, black, rgb(170, 170, 170));
-            height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-        }
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
 
-        .calculadora {
-            position: absolute;
-            background: rgb(34, 34, 34);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 12px;
-            padding: 16px;
-            border: #000 1px solid;
-            -webkit-border-radius: 7px;
-            -moz-border-radius: 7px;
-            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px, inset rgba(255, 255, 255, 0.9) 0px 1px 1px -1px;
-            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px, inset rgba(255, 255, 255, 0.9) 0px 1px 1px -1px;
-            -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px, inset rgba(255, 255, 255, 0.9) 0px 1px 1px -1px;
-            background-image: -moz-linear-gradient(top, #333333, #1f1f1f);
-            background-image: -webkit-linear-gradient(top, #333333, #1f1f1f);
-            background-image: linear-gradient(top, #333333, #1f1f1f);
-            overflow: hidden;
-            text-align: center;
-        }
+            .fundo {
+                background-image: linear-gradient(45deg, black, rgb(170, 170, 170));
+                height: 100vh;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+            }
 
-        .btn {
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            cursor: pointer;
-            margin: 3px;
-            background-color: rgb(60, 59, 59);
-            border: none;
-            border-radius: 5px;
-            color: #c0c0c0;
-            border: #000 1px solid;
-            border-radius: 5px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            text-shadow: #000 0px -1px 0px;
-            box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
-            -webkit-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
-            -moz-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
-            background-image: -moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-            background-image: -webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-            background-image: linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
+            .calculadora {
+                position: absolute;
+                background: rgb(34, 34, 34);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 12px;
+                padding: 16px;
+                border: #000 1px solid;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px, inset rgba(255, 255, 255, 0.9) 0px 1px 1px -1px;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px, inset rgba(255, 255, 255, 0.9) 0px 1px 1px -1px;
+                -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 5px, inset rgba(255, 255, 255, 0.9) 0px 1px 1px -1px;
+                background-image: -moz-linear-gradient(top, #333333, #1f1f1f);
+                background-image: -webkit-linear-gradient(top, #333333, #1f1f1f);
+                background-image: linear-gradient(top, #333333, #1f1f1f);
+                overflow: hidden;
+                text-align: center;
+            }
 
-        .btn:active {
-            box-shadow: inset rgba(0, 0, 0, 0.5) 0px 2px 8px;
-            background-image: -moz-linear-gradient(top, #2f2f2f 0%, #363636 100%);
-            background-image: -webkit-linear-gradient(top, #2f2f2f 0%, #363636 100%);
-            background-image: linear-gradient(top, #2f2f2f 0%, #363636 100%)
-        }
+            .btn {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                cursor: pointer;
+                margin: 3px;
+                background-color: rgb(60, 59, 59);
+                border: none;
+                border-radius: 5px;
+                color: #c0c0c0;
+                border: #000 1px solid;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                text-align: center;
+                text-decoration: none;
+                text-shadow: #000 0px -1px 0px;
+                box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
+                -webkit-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
+                -moz-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
+                background-image: -moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+                background-image: -webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+                background-image: linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
 
-        .btnIgual {
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            cursor: pointer;
-            margin: 3px;
-            height: 106px;
-            color: #c0c0c0;
-            border-radius: 5px;
-            border: #000 1px solid;
-            border-radius: 5px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            text-align: center;
-            text-shadow: #000 0px -1px 0px;
-            box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
-            -webkit-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
-            -moz-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
-            background-image: -moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-            background-color: rgb(94, 80, 0);
-            background-image: linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
+            .btn:active {
+                box-shadow: inset rgba(0, 0, 0, 0.5) 0px 2px 8px;
+                background-image: -moz-linear-gradient(top, #2f2f2f 0%, #363636 100%);
+                background-image: -webkit-linear-gradient(top, #2f2f2f 0%, #363636 100%);
+                background-image: linear-gradient(top, #2f2f2f 0%, #363636 100%)
+            }
+
+            .btnIgual {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                cursor: pointer;
+                margin: 3px;
+                height: 106px;
+                color: #c0c0c0;
+                border-radius: 5px;
+                border: #000 1px solid;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                text-align: center;
+                text-shadow: #000 0px -1px 0px;
+                box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
+                -webkit-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
+                -moz-box-shadow: inset rgba(255, 255, 255, 0.1) 0px 1px 0px, inset rgba(0, 0, 0, 0.2) 0px -2px 2px;
+                background-image: -moz-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+                background-color: rgb(94, 80, 0);
+                background-image: linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
 
 
-        .btnIgual:active {
-            box-shadow: inset rgba(0, 0, 0, 0.5) 0px 2px 8px;
-            background-image: -moz-linear-gradient(top, #3c3a00 0%, #545100 100%);
-            background-image: -webkit-linear-gradient(top, #3c3a00 0%, #545100 100%);
-            background-image: linear-gradient(top, #3c3a00 0%, #545100 100%)
-        }
+            .btnIgual:active {
+                box-shadow: inset rgba(0, 0, 0, 0.5) 0px 2px 8px;
+                background-image: -moz-linear-gradient(top, #3c3a00 0%, #545100 100%);
+                background-image: -webkit-linear-gradient(top, #3c3a00 0%, #545100 100%);
+                background-image: linear-gradient(top, #3c3a00 0%, #545100 100%)
+            }
 
-        #display {
-            width: 282px;
-            height: 40px;
-            margin: 5px;
-            font-size: 24px;
-            color: #c0c0c0;
-            text-align: right;
-            padding: 5px;
-            border-radius: 5px;
-            overflow-y: hidden;
-            overflow-x: auto;
-            letter-spacing: 3px;
-            border: #000 1px solid;
-            border-radius: 7px;
-            -webkit-border-radius: 7px;
-            -moz-border-radius: 7px;
-            box-shadow: inset rgba(0, 0, 0, 1) 0px 1px 4px, inset rgba(225, 225, 225, 0.3) 0px -2px 4px -2px;
-            -webkit-box-shadow: inset rgba(0, 0, 0, 1) 0px 1px 4px, inset rgba(225, 225, 225, 0.3) 0px -2px 4px -2px;
-            -moz-box-shadow: inset rgba(0, 0, 0, 1) 0px 1px 4px, inset rgba(225, 225, 225, 0.3) 0px -2px 4px -2px;
-            background-image: -moz-linear-gradient(top, #3e3e3e 0%, #303030 100%);
-            background-color: rgb(67, 67, 67);
-            background-image: linear-gradient(top, #3e3e3e 0%, #303030 100%);
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
+            #display {
+                width: 282px;
+                height: 40px;
+                margin: 5px;
+                font-size: 24px;
+                color: #c0c0c0;
+                text-align: right;
+                padding: 5px;
+                border-radius: 5px;
+                overflow-y: hidden;
+                overflow-x: auto;
+                letter-spacing: 3px;
+                border: #000 1px solid;
+                border-radius: 7px;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                box-shadow: inset rgba(0, 0, 0, 1) 0px 1px 4px, inset rgba(225, 225, 225, 0.3) 0px -2px 4px -2px;
+                -webkit-box-shadow: inset rgba(0, 0, 0, 1) 0px 1px 4px, inset rgba(225, 225, 225, 0.3) 0px -2px 4px -2px;
+                -moz-box-shadow: inset rgba(0, 0, 0, 1) 0px 1px 4px, inset rgba(225, 225, 225, 0.3) 0px -2px 4px -2px;
+                background-image: -moz-linear-gradient(top, #3e3e3e 0%, #303030 100%);
+                background-color: rgb(67, 67, 67);
+                background-image: linear-gradient(top, #3e3e3e 0%, #303030 100%);
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
 
-        ::-webkit-scrollbar {
-            height: 6px;
-        }
+            ::-webkit-scrollbar {
+                height: 6px;
+            }
 
-        ::-webkit-scrollbar-track {
-            background-color: rgb(60, 59, 59);
-        }
+            ::-webkit-scrollbar-track {
+                background-color: rgb(60, 59, 59);
+            }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #161616;
-        }
-    </style>
+            ::-webkit-scrollbar-thumb {
+                background-color: #161616;
+            }
+        </style>
 </head>
 
 <body onkeypress="manipularTeclado()">
